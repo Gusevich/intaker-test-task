@@ -2,6 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.0.
 
+## Install dependencies
+
+Run `npm install` in order to install dependencies needed.
+
+## Access token
+
+Visit https://openweathermap.org/api and register new account if you don't have one. Click `My API Keys`, copy your access token and paste it in `environment.ts`.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
