@@ -1,0 +1,16 @@
+<p-card class="weather-card" styleClass="p-mb-3">
+  <div class="weather-card-header">
+    <img
+      class="weather-image"
+      src="https://openweathermap.org/img/wn/{{ weather.weather[0].icon }}@2x.png"
+      alt="Weather icon"
+    />
+  </div>
+  <div class="weather-card-content">
+    <p><span class="weather-title">Temperature:</span> {{ weather.main.temp | number: '1.0-0' }}°C</p>
+    <p><span class="weather-title">Highest:</span> {{ weather.main.temp_max | number: '1.0-0' }}°C</p>
+    <p><span class="weather-title">Lowest:</span> {{ weather.main.temp_min | number: '1.0-0' }}°C</p>
+    <p><span class="weather-title">Humidity:</span> {{ weather.main.humidity }}%</p>
+    <p><span class="weather-title">Description:</span> {{ weather.weather[0].description }}</p>
+  </div>
+</p-card>

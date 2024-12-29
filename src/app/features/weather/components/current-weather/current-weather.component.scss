@@ -1,0 +1,31 @@
+:host {
+  .weather {
+    &-card {
+      flex-direction: row;
+      align-items: center;
+      gap: 15px;
+      width: max-content;
+      margin-top: 15px;
+      padding: 10px;
+    }
+
+    &-title {
+      font-weight: bold;
+    }
+
+    &-image {
+      width: 100px;
+    }
+
+    &-card-header {
+      margin-bottom: 16px;
+    }
+
+    &-card-content {
+      padding: 0;
+      font-size: 14px;
+      line-height: 1.5;
+      text-align: left;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+:host {
+  .weather {
+    &-tabs {
+      margin-top: 15px;
+    }
+
+    &-items {
+      margin-top: 10px;
+    }
+
+    &-current {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+    }
+
+    &-chart {
+      display: flex;
+      justify-content: center;
+
+      p-chart {
+        min-width: 50%;
+      }
+    }
+
+    &-forecast, &-current {
+      padding: 10px;
+    }
+
+    &-form {
+      margin-bottom: 15px;
+    }
+  }
+}

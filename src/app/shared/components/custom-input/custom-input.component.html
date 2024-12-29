@@ -1,0 +1,12 @@
+<p-floatlabel>
+  <label for="custom-input" class="custom-label">{{ label }}</label>
+  <input
+    id="custom-input"
+    pInputText
+    type="text"
+    [(ngModel)]="value"
+    (input)="onInputChange($event)"
+    (blur)="onBlur()"
+    class="custom-input"
+  />
+</p-floatlabel>

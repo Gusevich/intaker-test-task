@@ -1,0 +1,12 @@
+<p-carousel
+  [value]="forecasts"
+  [numVisible]="3"
+  [numScroll]="3"
+  [circular]="false"
+  [responsiveOptions]="responsiveOptions"
+>
+  <ng-template pTemplate="item" let-forecast>
+    <intaker-forecast-item [forecast]="forecast"></intaker-forecast-item>
+  </ng-template>
+</p-carousel>
+

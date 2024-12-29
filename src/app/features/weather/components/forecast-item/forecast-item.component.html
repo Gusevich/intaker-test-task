@@ -1,0 +1,15 @@
+<p-card class="forecast-item" styleClass="p-mb-3">
+  <ng-template #header>
+    <div class="forecast-item-header">
+      <img class="forecast-item-avatar" src="https://openweathermap.org/img/wn/{{ forecast.weather[0].icon }}@2x.png" alt="Weather icon" />
+      <h3 class="forecast-item-title">{{ forecast.dt_txt | date: 'dd.MM.YYYY - HH:mm' }}</h3>
+    </div>
+  </ng-template>
+  <div class="forecast-item-content">
+    <p><span class="forecast-item-label">Temperature:</span> {{ forecast.main.temp | number: '1.0-0' }}°C</p>
+    <p><span class="forecast-item-label">Highest:</span> {{ forecast.main.temp_max | number: '1.0-0' }}°C</p>
+    <p><span class="forecast-item-label">Lowest:</span> {{ forecast.main.temp_min | number: '1.0-0' }}°C</p>
+    <p><span class="forecast-item-label">Humidity:</span> {{ forecast.main.humidity }}%</p>
+    <p><span class="forecast-item-label">Description:</span> {{ forecast.weather[0].description }}</p>
+  </div>
+</p-card>

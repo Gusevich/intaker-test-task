@@ -1,0 +1,38 @@
+<form class="weather-form" [formGroup]="form">
+  <intaker-custom-input [formControlName]="'cityName'"
+                        [label]="'City Name'"
+                        [placeholder]="'Enter city name'"></intaker-custom-input>
+</form>
+@if (hasSearched) {
+@if (weatherData$ | async; as weatherData) {
+<h1>Results for {{ form.value.cityName }}</h1>
+<div class="weather-current">
+  <h3>Current Weather</h3>
+  <intaker-current-weather [weather]="weatherData.currentWeather"></intaker-current-weather>
+</div>
+
+<div class="weather-forecast">
+  <h3>5-day forecast + graph</h3>
+  <p-tabView>
+    @for (group of weatherData.forecast; track group.date) {
+    <p-tabPanel [header]="group.date">
+      <div class="weather-items">
+        <intaker-forecast-list [forecasts]="group.forecast"></intaker-forecast-list>
+      </div>
+      <div class="weather-chart">
+        <p-chart
+          type="line"
+          [data]="group.chartData"
+          [responsive]="true"
+        ></p-chart>
+      </div>
+    </p-tabPanel>
+    }
+  </p-tabView>
+</div>
+} @else {
+<h1>No info found for the specified city name: {{ form.value.cityName }}</h1>
+}
+  } @else {
+<h1>Enter a city name to search for weather data.</h1>
+}

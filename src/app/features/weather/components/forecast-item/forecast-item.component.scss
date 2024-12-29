@@ -1,0 +1,40 @@
+:host {
+  .forecast-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+
+    &-title {
+      font-weight: bold;
+    }
+
+    &-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 20px;
+    }
+
+    &-avatar {
+      width: 100px;
+      margin-right: 16px;
+    }
+
+    &-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    &-content {
+      text-align: left;
+      margin-top: 16px;
+      width: 100%;
+    }
+
+    &-label {
+      font-weight: bold;
+    }
+  }
+}
